@@ -1,8 +1,8 @@
-@import '../styles/custom-media.css';
-@import '../styles/custom-properties.css';
+@import "../styles/custom-media.css";
+@import "../styles/custom-properties.css";
 
 .content {
-  background: var(--color-white);
+  background: var(--color-pistachio);
   min-height: calc(100% - 73px - 120px);
 
   @media (--media-min-small) {

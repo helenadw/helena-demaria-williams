@@ -1,4 +1,4 @@
-@import './custom-properties.css';
+@import "./custom-properties.css";
 
 html {
   font-family: var(--font-family-sans);
@@ -8,7 +8,7 @@ html {
 
 body {
   -webkit-font-smoothing: antialiased;
-  background: var(--color-white);
+  background: var(--color-pistachio);
   color: var(--color-black);
   margin: 0;
 }
