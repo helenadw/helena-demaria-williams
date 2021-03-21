@@ -1,0 +1,41 @@
+@import "../styles/custom-media.css";
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  @media (--media-min-medium) {
+    flex-direction: row;
+  }
+}
+
+.copy-container {
+  padding-right: 30px;
+  order: 2;
+
+  @media (--media-min-medium) {
+    order: 1;
+  }
+}
+.img {
+  max-width: 400px;
+
+  @media (--media-max-small) {
+    max-width: 100%;
+  }
+}
+
+.img-container {
+  order: 1;
+
+  @media (--media-min-medium) {
+    order: 2;
+  }
+}
+.large-text {
+  font-size: 1.5rem;
+}
+
+.medium-text {
+  font-size: 1.2rem;
+}
