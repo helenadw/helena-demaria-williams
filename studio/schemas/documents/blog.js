@@ -32,6 +32,12 @@ export default {
       type: 'simplePortableText'
     },
     {
+      name: 'members',
+      title: 'Members',
+      type: 'array',
+      of: [{type: 'projectMember'}]
+    },
+    {
       name: 'startedAt',
       title: 'Started at',
       type: 'datetime'
