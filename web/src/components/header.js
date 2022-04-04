@@ -19,7 +19,8 @@ const Header = ({ onHideNav, onShowNav, showNav, siteTitle }) => (
       <nav className={cn(styles.nav, showNav && styles.showNav)}>
         <ul>
           <li>
-            <Link to="/archive/">Projects</Link>
+            <Link to="/projects/">Projects</Link>
+            <Link to="/blog/">Blog</Link>
             <Link to="/about/">About</Link>
             <Link to="/contact/">Contact</Link>
           </li>
