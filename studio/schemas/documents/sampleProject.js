@@ -21,6 +21,11 @@ export default {
       }
     },
     {
+      name: 'link',
+      title: 'Link',
+      type: 'string'
+    },
+    {
       name: 'publishedAt',
       title: 'Published at',
       description: 'You can use this field to schedule projects where you show them',
