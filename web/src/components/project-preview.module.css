@@ -1,13 +1,20 @@
 @import "../styles/custom-media.css";
 
 .root {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   color: inherit;
   text-decoration: none;
-  /* padding: 4em; */
-  display: flex;
+  padding: 1em;
+  /* display: flex; */
+  /* flex-direction: row; */
   background: rgb(17, 17, 17);
   transition: all ease 1s;
+  @media (--media-min-medium) {
+    flex-direction: row;
+  }
 }
 
 .root:hover {
@@ -20,17 +27,21 @@
 
 .project-detail {
   padding: 2.5em;
-  width: 100%;
+  /* width: 100%; */
   color: white;
+  border: solid pink;
   z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   @media (--media-min-medium) {
-    padding: 5em;
     width: 40%;
   }
 }
 
 .title {
+  min-width: 20%;
   @media (hover: hover) {
     @nest .root:hover & {
       text-decoration: underline;
@@ -39,11 +50,15 @@
 }
 
 .excerpt {
+  text-align: center;
   @nest & p {
     margin: 0.5em 0;
   }
 
   @nest & strong {
     font-weight: 600;
+  }
+  @media (--media-min-medium) {
+    text-align: right;
   }
 }

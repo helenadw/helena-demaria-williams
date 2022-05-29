@@ -30,12 +30,12 @@ export const query = graphql`
           slug {
             current
           }
+          link
         }
       }
     }
   }
 `;
-
 const ArchivePage = props => {
   const { data, errors } = props;
   if (errors) {
@@ -47,6 +47,8 @@ const ArchivePage = props => {
   }
   const projectNodes =
     data && data.projects && mapEdgesToNodes(data.projects).filter(filterOutDocsWithoutSlugs);
+    console.log(projectNodes, 'project nodes')
+
   return (
     <Layout>
       <SEO title="Projects" />

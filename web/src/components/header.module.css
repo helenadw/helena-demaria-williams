@@ -9,7 +9,7 @@
 .wrapper {
   box-sizing: border-box;
   margin: 0 auto;
-  max-width: 960px;
+  max-width: 1300px;
   padding: 1em;
   display: flex;
 
@@ -19,7 +19,8 @@
 }
 
 .branding {
-  font-weight: 600;
+  font-weight: 400;
+  font-style: italic;
   flex: 1;
 
   @nest & a {

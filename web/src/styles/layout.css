@@ -1,15 +1,17 @@
 @import "./custom-properties.css";
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap');
 
 html {
   font-family: var(--font-family-sans);
   font-size: var(--font-base-size);
   line-height: var(--font-base-line-height);
+  font-family: 'IBM Plex Mono', monospace;
 }
 
 body {
   -webkit-font-smoothing: antialiased;
-  background: var(--color-pistachio);
-  color: var(--color-black);
+  color: white;
+  background-color: var(--color-black);
   margin: 0;
 }
 

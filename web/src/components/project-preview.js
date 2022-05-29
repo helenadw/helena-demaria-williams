@@ -9,18 +9,15 @@ import { responsiveTitle3 } from "./typography.module.css";
 
 function ProjectPreview(props) {
   return (
-    <Link className={styles.root} to={`/project/${props.slug.current}`}>
-      <div className={styles.projectDetail}>
-      <h3 className={cn(responsiveTitle3, styles.title)}>{props.title}</h3>
-      {props._rawExcerpt && (
-        <div className={styles.excerpt}>
-          <BlockText blocks={props._rawExcerpt} />
-        </div>
-      )}
-      </div>
-
-      
-    </Link>
+    <a className={styles.root} href={props.link}>
+        <h3 className={cn(responsiveTitle3, styles.title)}>{props.title}</h3>
+        {props._rawExcerpt && (
+          <div className={styles.excerpt}>
+            <BlockText blocks={props._rawExcerpt} />
+          </div>
+        )}
+    </a>
+    
   );
 }
 

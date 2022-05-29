@@ -8,6 +8,7 @@ import {
 import Container from "../components/container";
 import GraphQLErrorList from "../components/graphql-error-list";
 import ProjectPreviewGrid from "../components/project-preview-grid";
+import BlogPreviewGrid from "../components/blog-preview-grid";
 import SEO from "../components/seo";
 import Layout from "../containers/layout";
 import Hero from '../components/hero'
@@ -54,6 +55,29 @@ export const query = graphql`
           slug {
             current
           }
+          link
+        }
+      }
+    }
+    blog: allSanityBlog(
+      limit: 12
+      sort: { fields: [publishedAt], order: DESC }
+      filter: { slug: { current: { ne: null } }, publishedAt: { ne: null } }
+    ) {
+      edges {
+        node {
+          id
+          mainImage {
+            asset {
+              _id
+            }
+            alt
+          }
+          title
+          _rawExcerpt
+          slug {
+            current
+          }
         }
       }
     }
@@ -77,7 +101,11 @@ const IndexPage = props => {
         .filter(filterOutDocsWithoutSlugs)
         .filter(filterOutDocsPublishedInTheFuture)
     : [];
-
+  const blogNodes = (data || {}).blog
+    ? mapEdgesToNodes(data.blog)
+        .filter(filterOutDocsWithoutSlugs)
+        .filter(filterOutDocsPublishedInTheFuture)
+    : [];
   if (!site) {
     throw new Error(
       'Missing "Site settings". Open the studio at http://localhost:3333 and add some content to "Site settings" and restart the development server.'
@@ -92,9 +120,16 @@ const IndexPage = props => {
         <Hero />
         {projectNodes && (
           <ProjectPreviewGrid
-            title="Latest projects"
+            title="projects"
             nodes={projectNodes}
-            browseMoreHref="/archive/"
+            browseMoreHref="/projects/"
+          />
+        )}
+        {blogNodes && (
+          <BlogPreviewGrid
+            title="blog"
+            nodes={blogNodes}
+            browseMoreHref="/blog/"
           />
         )}
       </Container>

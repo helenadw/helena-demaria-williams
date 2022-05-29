@@ -22,9 +22,9 @@ const AboutDetail = () => {
 
                 <p>If you want to get in touch about projects or to share something interesting, you can reach me at <a href='mailto:hi@hcdw.co'>hi@hcdw.co</a>.</p>
             </div>
-            <div className={styles.imgContainer}>
+            {/* <div className={styles.imgContainer}>
                 <img src={img} className={styles.img}/>
-            </div>
+            </div> */}
 
         </div>
         

@@ -1,7 +1,7 @@
 @import "../styles/custom-media.css";
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
 :root {
-  --base-unit: 17;
+  --base-unit: 16;
 
   /* Font sizes */
   --font-micro-size: calc(8 / var(--base-unit) * 1rem);
@@ -85,7 +85,7 @@
 }
 
 .responsiveTitle1 {
-  font-weight: 900;
+  font-weight: 400;
   font-size: var(--font-title3-size);
   line-height: var(--font-title3-line-height);
   margin: 1rem 0 2rem;
@@ -102,7 +102,7 @@
 }
 
 .responsiveTitle2 {
-  font-weight: 900;
+  font-weight: 400;
   font-size: var(--font-large-size);
   line-height: var(--font-large-line-height);
   margin: 1.5rem 0 0.5rem;
@@ -119,7 +119,7 @@
 }
 
 .responsiveTitle3 {
-  font-weight: 900;
+  font-weight: 400;
   font-size: var(--font-large-size);
   line-height: var(--font-large-line-height);
   margin: 1rem 0 0.5rem;
